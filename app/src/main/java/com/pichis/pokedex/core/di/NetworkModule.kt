@@ -6,6 +6,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
@@ -16,12 +17,17 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun retrofitProvider(): Retrofit {
+    fun retrofitProvider(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
+            .client(okHttpClient)
             .build()
     }
+
+    @Singleton
+    @Provides
+    fun okHttpCliendProvider(): OkHttpClient = OkHttpClient.Builder().build()
 
     @Singleton
     @Provides
