@@ -1,4 +1,4 @@
-package com.pichis.pokedex.data.models.general
+package com.pichis.pokedex.data.network.models.general
 
 data class APIResourceList(
     val count: Int,

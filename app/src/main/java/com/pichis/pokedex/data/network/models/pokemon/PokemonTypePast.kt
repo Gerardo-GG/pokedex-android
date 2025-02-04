@@ -1,7 +1,7 @@
-package com.pichis.pokedex.data.models.pokemon
+package com.pichis.pokedex.data.network.models.pokemon
 
 import com.google.gson.annotations.SerializedName
-import com.pichis.pokedex.data.models.general.NamedAPIResource
+import com.pichis.pokedex.data.network.models.general.NamedAPIResource
 
 data class PokemonTypePast(
     @SerializedName("generation") val generation: NamedAPIResource,

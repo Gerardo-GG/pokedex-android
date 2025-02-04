@@ -1,4 +1,4 @@
-package com.pichis.pokedex.data.models.pokemon
+package com.pichis.pokedex.data.network.models.pokemon
 
 import com.google.gson.annotations.SerializedName
 

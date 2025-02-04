@@ -1,24 +1,23 @@
 [versions]
-agp = "8.6.0"
+agp = "8.6.1"
 kotlin = "1.9.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.9.3"
-composeBom = "2024.04.01"
+activityCompose = "1.10.0"
+composeBom = "2025.01.01"
 
 # Dagger hilt
 hiltAndroid = "2.51"
-kapt = "1.9.0"
-ksp = "1.9.0-1.0.13"
+hiltNavigationCompose = "1.2.0"
 # Coil
-coilCompose = "1.3.2"
+coilCompose = "2.6.0"
 # Retrofit
 retrofit-version = "2.10.0"
 # Coroutines
-coroutines = "1.7.1"
+coroutines = "1.7.3"
 # Room
 roomRuntime = "2.6.1"
 
@@ -53,6 +52,7 @@ androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "
 # Dagger hilt
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
+dagger-hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 
 # Coil
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
@@ -60,9 +60,8 @@ coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose"
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
-kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kapt" }
-kotlinKsp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+# Dagger Hilt
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
 
 [bundles]
 retrofit = ["retrofit", "retrofit-gson"]

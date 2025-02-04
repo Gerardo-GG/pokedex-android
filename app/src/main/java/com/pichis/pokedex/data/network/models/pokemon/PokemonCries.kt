@@ -1,4 +1,4 @@
-package com.pichis.pokedex.data.models.pokemon
+package com.pichis.pokedex.data.network.models.pokemon
 
 data class PokemonCries(
     val latest: String,

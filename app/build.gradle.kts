@@ -2,10 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 
-    alias(libs.plugins.kotlinKapt)
-    alias(libs.plugins.kotlinKsp)
-
-    id("com.google.dagger.hilt.android")
+    kotlin("kapt")
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -67,6 +65,7 @@ dependencies {
 
     // Dagger
     implementation(libs.hilt.android)
+    implementation(libs.dagger.hilt.navigation)
     kapt(libs.hilt.android.compiler)
 
     // Images
