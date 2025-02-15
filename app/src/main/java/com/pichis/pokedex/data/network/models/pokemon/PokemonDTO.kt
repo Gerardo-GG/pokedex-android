@@ -3,7 +3,7 @@ package com.pichis.pokedex.data.network.models.pokemon
 import com.google.gson.annotations.SerializedName
 import com.pichis.pokedex.data.network.models.general.NamedAPIResource
 
-data class PokemonResponse (
+data class PokemonDTO (
     val id: Int,
     val name: String,
     @SerializedName("base_experience") val baseExperience: Int,

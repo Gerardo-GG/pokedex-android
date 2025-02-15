@@ -1,7 +1,7 @@
 package com.pichis.pokedex.core.di
 
 import com.pichis.pokedex.data.network.PokemonAPI
-import com.pichis.pokedex.utils.Constants
+import com.pichis.pokedex.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,7 +19,7 @@ class NetworkModule {
     @Provides
     fun retrofitProvider(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(Constants.BASE_URL)
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
