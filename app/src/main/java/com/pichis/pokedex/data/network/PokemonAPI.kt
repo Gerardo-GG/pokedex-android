@@ -10,7 +10,7 @@ interface PokemonAPI {
     @GET("/api/v2/pokemon")
     suspend fun getPokemonList(): PokemonListDTO
 
-    @GET("/api/v2/pokemon/{id}")
-    suspend fun getPokemonById(@Path("id") id: Int): PokemonDTO
+    @GET("/api/v2/pokemon/{name}")
+    suspend fun getPokemonById(@Path("name") name: String): PokemonDTO
 
 }
