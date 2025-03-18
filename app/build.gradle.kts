@@ -81,7 +81,7 @@ dependencies {
     annotationProcessor(libs.androidx.room.compiler)
 
     // Paging
-    // implementation(libs.paging.compose)
+    implementation(libs.paging.compose)
 
     // To use Kotlin Symbol Processing (KSP)
     kapt(libs.androidx.room.compiler)

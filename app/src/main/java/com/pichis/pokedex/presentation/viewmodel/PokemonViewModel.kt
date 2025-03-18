@@ -19,20 +19,5 @@ class PokemonViewModel @Inject constructor(
     private val _uiState = MutableStateFlow<UIState<List<PokemonEnitity>>>(UIState.Loading())
     val uiState = _uiState
 
-    fun getListPokemon() {
-        viewModelScope.launch {
-            when(val response = pokemonListUseCase()) {
-                is Resource.Error -> {
-                    _uiState.value = UIState.Error(message = response.message ?: "")
-                }
-                is Resource.Loading -> {
-                    _uiState.value = UIState.Loading()
-                }
-                is Resource.Success -> {
-                    _uiState.value = UIState.Success(response.data ?: emptyList())
-                }
-            }
-        }
-    }
-
+    val pokemonList = pokemonListUseCase()
 }

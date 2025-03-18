@@ -61,7 +61,7 @@ dagger-hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", ver
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 
 # Paging
-paging-compose = { group = "adroidx.paging", name = "paging-compose", version.ref = "pagingCompose" }
+paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "pagingCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
